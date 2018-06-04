@@ -1,17 +1,32 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SearchControl :onSearch="handleSearch"/>
+    <MovieList :movies="movies"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import SearchControl from './components/SearchControl';
+import MovieList from './components/MovieList';
+import { getMovies } from './services/api';
 
 export default {
+  data() {
+    return {
+      movies: null,
+    };
+  },
   name: 'app',
   components: {
-    HelloWorld
+    SearchControl,
+    MovieList
+  },
+  methods: {
+    handleSearch(title) {
+      getMovies(title).then(data => {
+        this.movies = data.Search;
+      });
+    }
   }
 };
 </script>
@@ -19,10 +34,5 @@ export default {
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
