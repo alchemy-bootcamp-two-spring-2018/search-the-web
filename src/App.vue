@@ -52,7 +52,16 @@ ul {
   padding: 0;
 }
 
+h3 {
+  margin: 5px;
+}
+
+p {
+  margin: 2px;
+}
+
 li {
+  padding-top: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +70,7 @@ li {
   text-align: center;
   background: #eee;
   width: 250px;
-  height: 400px;
+  height: 375px;
   border-radius: 5px;
 }
 </style>
