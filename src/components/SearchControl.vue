@@ -1,7 +1,9 @@
 <template>
-  <form @submit.prevent="onSearch(search)">
+  <form @submit.prevent="onSearch(searchTitle, searchYear)">
     <label>Title:</label>
-    <input v-model="search">
+    <input v-model="searchTitle">
+    <label>Year:</label>
+    <input v-model="searchYear">
     <button type="submit">Search</button>
   </form>
 </template>
@@ -9,7 +11,10 @@
 <script>
 export default {
   data() {
-    return { search: '' };
+    return {
+      searchTitle: '',
+      searchYear: ''
+    };
   },
   props: {
     onSearch: {

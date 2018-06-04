@@ -22,8 +22,8 @@ export default {
     MovieList
   },
   methods: {
-    handleSearch(title) {
-      getMovies(title).then(data => {
+    handleSearch(title, year) {
+      getMovies(title, year).then(data => {
         this.movies = data.Search;
       });
     }
@@ -34,5 +34,19 @@ export default {
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+ul {
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap; */
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px;
+  line-height: 2px;
 }
 </style>

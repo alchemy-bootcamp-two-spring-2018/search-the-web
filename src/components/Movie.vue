@@ -1,6 +1,8 @@
 <template>
   <li>
+    <img :src="movie.Poster">
     <h3>{{ movie.Title }}</h3>
+    <p>{{ movie.Year }}</p>
   </li>
 </template>
 
@@ -11,5 +13,7 @@ export default {
 </script>
 
 <style>
-
+  img {
+    max-height: 250px;
+  }
 </style>
