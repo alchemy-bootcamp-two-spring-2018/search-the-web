@@ -1,10 +1,25 @@
 <template>
-  <h2>Search controls go here</h2>
+  <form @submit.prevent="onSearch(search)">
+    <label>Enter Star Ship Name</label>
+    <input v-model="search"/>
+    <button type="submit">Ship Search</button>
+    </form>
 </template>
 
 <script>
-export default {
 
+export default {
+  data() {
+    return {
+      search: ''
+    };
+  },
+  props: {
+    onSearch: {
+      type: Function,
+      required: true
+    }
+  }
 };
 </script>
 

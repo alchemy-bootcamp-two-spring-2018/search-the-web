@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Old Ben's Junk Emporium</h1>
-    <ShipSearch/>
+    <ShipSearch :onSearch="handleSearch"/>
     <ShipList :ships="ships"/>
   </div>
 </template>
@@ -267,11 +267,15 @@ export default {
       ]
     };
   },
-
   components: {
     ShipSearch,
     ShipList,
   },
+  methods: {
+    handleSearch(search) {
+
+    }
+  }
 };
 </script>
 
