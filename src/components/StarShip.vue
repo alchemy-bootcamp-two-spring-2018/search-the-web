@@ -1,13 +1,14 @@
 <template>
-  <ul>
-    <li>Ship example</li>
-  </ul>
+  <li>
+    <h4>{{starShip.name}}</h4>
+  </li>
 </template>
 
 <script>
 export default {
+  props: ['starShip']
 
-}
+};
 </script>
 
 <style>

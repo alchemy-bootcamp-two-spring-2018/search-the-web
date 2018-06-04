@@ -1,19 +1,26 @@
 <template>
 <div>
-  <h4>List of ship models here</h4>
-  <SpaceShip/>
+  <h4>List of Star Ship models here</h4>
+  <ul>
+  <StarShip
+  v-for="starShip in ships"
+  :key="starShip.url"
+  :starShip="starShip"
+  />
+  </ul>
 </div>
 </template>
 
 <script>
-import SpaceShip from './SpaceShip';
+
+import StarShip from './StarShip';
 
 export default {
  
-  props: ['spaceShip'],
+  props: ['ships'],
  
   components: {
-    SpaceShip
+    StarShip
   }
 };
 
