@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2>Movies & TV</h2>
       <ul>
         <Movie
           v-for="movie in movies"
