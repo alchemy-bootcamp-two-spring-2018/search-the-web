@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Hello World: Let's Search the Web!!!</h1>
-    <SearchControl onSearch="handleSearch"/>
+    <SearchControl :onSearch="handleSearch"/>
     <PokemonList :pokemon="pokemon"/>
   </div>
 </template>

@@ -3,9 +3,9 @@
     <h1>Controls</h1>
     <form @submit.prevent="onSearch(search)">
       <label>pokemon: </label>
-      <input v-model="search">
+      <input v-model="search" placeholder="search Pokemon">
       <button type="submit">Search</button>
-      pokemon is {{ pokemon }}
+      <div>You searched for: {{ search }}</div>
       </form>
   </div>
 </template>
