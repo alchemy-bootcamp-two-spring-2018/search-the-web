@@ -7,6 +7,9 @@
 
 <script>
 import SearchControl from './components/SearchControl';
+import DrinkList from './components/DrinkList';
+import { getDrinks } from './services/api';
+
 
 // eslint-disable-next-line
 console.log(process.env.VUE_APP_API_KEY);
@@ -14,17 +17,17 @@ console.log(process.env.VUE_APP_API_KEY);
 export default {
   data() {
     return {
-      people: null
+      drinks: null
     };
   },
   components: {
-    PeopleList,
+    DrinkList,
     SearchControl
   },
   methods: {
     handleSearch(name) {
-      getPeople(name).then(data => {
-        this.people = data.results;
+      getDrinks(name).then(data => {
+        this.drinkName = data.drinks;
       });
     }
   }
