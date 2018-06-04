@@ -1,7 +1,9 @@
 <template>
   <li>
-    <h4>{{starShip.name}}</h4>
+    <h3>Star-Ship Name: {{starShip.name}}</h3>
+    <h4>Model Class: {{starShip.model}}</h4>
   </li>
+    
 </template>
 
 <script>

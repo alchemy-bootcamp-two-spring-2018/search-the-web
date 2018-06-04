@@ -1,6 +1,5 @@
 <template>
 <div>
-  <h4>List of Star Ship models here</h4>
   <ul>
   <StarShip
   v-for="starShip in ships"
