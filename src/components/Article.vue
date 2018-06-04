@@ -1,12 +1,12 @@
 <template>
 <li>
-  <h3>{{drink.type}}</h3>
+  <h3>{{article.title}}</h3>
 </li>
 </template>
 
 <script>
 
 export default {
-  props: ['drink']
+  props: ['article']
 };
 </script>

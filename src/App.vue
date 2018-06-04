@@ -1,14 +1,15 @@
 <template>
   <div id="app">
       <SearchControl :onSearch="handleSearch" />
+      <ArticleList :articles="articles" />
   </div>
   
 </template>
 
 <script>
 import SearchControl from './components/SearchControl';
-import DrinkList from './components/DrinkList';
-import { getDrinks } from './services/api';
+import ArticleList from './components/ArticleList';
+import { getArticles } from './services/api';
 
 
 // eslint-disable-next-line
@@ -17,17 +18,17 @@ console.log(process.env.VUE_APP_API_KEY);
 export default {
   data() {
     return {
-      drinks: null
+      articles: null
     };
   },
   components: {
-    DrinkList,
+    ArticleList,
     SearchControl
   },
   methods: {
-    handleSearch(name) {
-      getDrinks(name).then(data => {
-        this.drinkName = data.drinks;
+    handleSearch(title) {
+      getArticles(title).then(data => {
+        this.articles = data.articles;
       });
     }
   }

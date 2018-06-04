@@ -1,8 +1,9 @@
-export function getDrinks(type) {
-  const url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?s=' + encodeURIComponent(type); 
-  return fetch(url)
-    .then(response => response.json())
-    .catch(e => {
-      console.log(e);
-  });
+export function getArticles(title) {
+
+  const url = 'https://newsapi.org/v2/everything?q=' + title
+  + '&'
+  + 'apiKey=135cc32856a14a309805e4b35cc4af0a';
+  var req = new Request(url);
+  return fetch(req)
+    .then(response => response.json()); 
 }
