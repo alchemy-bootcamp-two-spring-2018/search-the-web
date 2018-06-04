@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="whole-item">
         <li class="news-item">
             <img 
             :src="news.urlToImage"
@@ -25,6 +25,10 @@ export default {
 </script>
 
 <style>
+
+.whole-item{
+    background-color: antiquewhite
+}
 
 .text-wrapper{
     width: 60%;
