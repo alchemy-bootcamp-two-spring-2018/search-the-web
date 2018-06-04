@@ -6,7 +6,7 @@
 
 <script>
 import HeroesList from './components/HeroesList';
-import { getHeroes } from './services/api';
+import { getHeroes } from './services/api.js';
 export default {
   data() {
     return {
