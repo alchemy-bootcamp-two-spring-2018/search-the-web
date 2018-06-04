@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeroesList :heroes="heroes"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HeroesList from './components/HeroesList';
+import { getHeroes } from './services/api';
 export default {
-  name: 'app',
+  data() {
+    return {
+      heroes: null
+    };
+  },
   components: {
-    HelloWorld
+    HeroesList
+  },
+  methods: {
+    handleSearch(name) {
+      getHeroes(name).then(data => {
+        this.heroes = data.results;
+      });
+    }
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
+
