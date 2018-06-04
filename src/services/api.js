@@ -1,6 +1,6 @@
 
-export function getStarShip(name) {
-  const url = 'https://swapi.co/api/starships/?search=' + encodeURIComponent(name);
+export function getStarShip(shipName) {
+  const url = 'https://swapi.co/api/starships/?search=' + encodeURIComponent(shipName);
   return fetch(url)
     .then(response => response.json());
 }
