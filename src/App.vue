@@ -1,26 +1,42 @@
 <template>
   <div id="app">
-    <HeroesList :heroes="heroes"/>
+    <h1>Booksy</h1>
+    <SearchControl :onSearch="handleSearch"/>
+    <BookList :onClick="updateSavedBooks" :books="booksResults"/>
+    <SavedBookList :savedBooks="savedBooks"/>
   </div>
 </template>
 
 <script>
-import HeroesList from './components/HeroesList';
-import { getHeroes } from './services/api.js';
+import BookList from './components/BookList';
+import SearchControl from './components/SearchControl';
+import SavedBookList from './components/SavedBookList';
+import { getBooks } from './services/api.js';
+
 export default {
   data() {
     return {
-      heroes: null
+      booksResults: null,
+      savedBooks: []
     };
   },
+  created() {
+  },
   components: {
-    HeroesList
+    BookList,
+    SearchControl,
+    SavedBookList
   },
   methods: {
     handleSearch(name) {
-      getHeroes(name).then(data => {
-        this.heroes = data.results;
+      getBooks(name).then(data => {
+        this.booksResults = data.items;
       });
+    },
+    updateSavedBooks(book) {
+      if(this.savedBooks.includes(book) === false) {
+        this.savedBooks.push(book);
+      }
     }
   }
 };
