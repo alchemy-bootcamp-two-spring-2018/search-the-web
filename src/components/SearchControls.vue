@@ -19,6 +19,11 @@ export default {
   data() {
     return { search: '', country: 'us' };
   },
+  
+  created() {
+    this.onSearch(this.search)
+  },
+
   props: {
     onSearch: {
       type: Function,
