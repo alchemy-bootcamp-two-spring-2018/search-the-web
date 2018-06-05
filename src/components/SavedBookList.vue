@@ -6,6 +6,7 @@
         v-for="book in savedBooks"
         :key="book.url"
         :book="book"
+        :render="render"
       />
     </div>
   </div>

@@ -7,6 +7,7 @@
         :key="book.url"
         :book="book"
         :onClick="onClick"
+        :render="render"
       />
     </div>
   </div>
@@ -16,6 +17,11 @@
 import Book from './Book';
 
 export default {
+  data() {
+    return {
+      render: true
+    };
+  },
   props: ['books', 'onClick'],
   components: {
     Book
@@ -25,8 +31,7 @@ export default {
 
 <style>
 .book-list {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  overflow: scroll;
+  white-space: nowrap;
 }
 </style>

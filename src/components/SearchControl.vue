@@ -23,5 +23,8 @@ export default {
 </script>
 
 <style>
-
+input {
+  font-size: 5em;
+  width: 50%;
+}
 </style>

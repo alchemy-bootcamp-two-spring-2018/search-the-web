@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Booksy</h1>
+    <h1>BOOK-C</h1>
     <SearchControl :onSearch="handleSearch"/>
     <BookList :onClick="updateSavedBooks" :books="booksResults"/>
     <SavedBookList :savedBooks="savedBooks"/>
@@ -45,5 +45,20 @@ export default {
 </script>
 
 <style>
+#app {
+  display: grid;
+  grid-template: auto 600px / 800px 400px;
+  grid-template-areas: 
+    "title search"
+    "content content";
+  font-family: 'Arial', sans-serif;
+  background: #003658;
+}
 
+h1 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 10em;
+  color: white;
+  margin: 0px;
+}
 </style>
