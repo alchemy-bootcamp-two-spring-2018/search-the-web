@@ -2,7 +2,7 @@
   <div>
 
     <form @submit.prevent="onSearch(search)">
-      <label>Search By Movie: </label>
+      <label>Search By Title: </label>
       <input v-model="search"/>
       <button type="submit">Search</button>
     </form>

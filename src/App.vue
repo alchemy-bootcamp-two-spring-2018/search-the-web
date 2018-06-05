@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <h1>Search The Web</h1>
-    <SearchControl :onSearch="handleSearch"/>
+    <div id="header">
+      <h1 class="h1">Movie Time!</h1>
+      <SearchControl :onSearch="handleSearch"/>
+    </div>
     <MovieList :movieList="movies"/>
   </div>
 </template>
@@ -34,12 +36,32 @@ export default {
 </script>
 
 <style>
+#header {
+  height: 100px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  margin-top: 0px;
+  background-image: url('http://www.pptbackgrounds.org/uploads/film-movies-movie-making-minimalism-creative-backgrounds-wallpapers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.h1 {
+  margin:0px;
+}
 MovieList {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+
 }
 #app {
   text-align: center;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
 }
+
 </style>

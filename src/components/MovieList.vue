@@ -24,6 +24,7 @@ export default {
 <style scoped>
   .results-Area {
     text-align: center;
+    background: rgba(211, 211, 211, 0.801);
   }
   .movie-results {
     height: 500px;
@@ -31,8 +32,11 @@ export default {
     flex-flow: row;
     justify-content: space-between;
     margin: auto;
-    width: 90%;
+    width: 99%;
     overflow-x: auto;
-    
+    height: 100%;
+  }
+  h1 {
+    margin-top: 0px;
   }
 </style>
