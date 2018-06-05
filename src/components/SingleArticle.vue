@@ -26,5 +26,4 @@ section {
 h3 {
   margin: 0;
 }
-
 </style>

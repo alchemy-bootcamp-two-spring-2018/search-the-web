@@ -1,12 +1,8 @@
 <template>
   <div>
-    
     <loading :loading="loading"/>
     <search-control :onSearch="handleSearch"/>
-    <article-list :articles="articles"
-    />
-
-    
+    <article-list :articles="articles"/>
   </div>
 </template> 
 
@@ -16,8 +12,6 @@ import SearchControl from './components/SearchControl.vue';
 import ArticleList from './components/ArticleList.vue';
 import Loading from './components/Loading.vue';
 import { getArticles } from '../services/api.js';
-
-console.log(process.env.VUE_APP_API_KEY);
 
 export default {
   data() {
@@ -46,7 +40,3 @@ export default {
   }
 };
 </script>
-
-<style>
-
-</style>
