@@ -31,8 +31,8 @@ export default {
   },
 
   methods: {
-    handleSearch(name) {
-      getNews(name).then(data => {
+    handleSearch(name, country) {
+      getNews(name, country).then(data => {
         this.news = data.articles;
       });
     }
