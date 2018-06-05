@@ -15,8 +15,9 @@ export default {
 </script>
 
 <style scoped>
+
 .loading {
-  background-color: creme;
   text-align: center;
-}
+}	
+
 </style>

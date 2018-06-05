@@ -3,7 +3,6 @@
     <Loading :loading="loading"/>
     <SearchControl :onSearch="handleSearch"/>
     <NewsList :news="news"/>
-
   </div>
 </template>
 
@@ -12,7 +11,6 @@ import SearchControl from './components/SearchControl';
 import NewsList from './components/NewsList';
 import Loading from './components/Loading';
 import { getNews } from './services/api';  
-
 
 export default {
   data() {
@@ -52,18 +50,22 @@ export default {
 ul {
 list-style: none;
 }
+
 h2 {
     font-size: 3em;
 }
+
 body {
     background-color: pink;
 }
+
 input {
   height: 30px;
-  font-size: 24px;
-  
+  font-size: 24px; 
 }
+
 label {
   font-size: 2em;
 }
+
 </style>

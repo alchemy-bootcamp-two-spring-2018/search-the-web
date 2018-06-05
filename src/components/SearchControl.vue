@@ -21,36 +21,38 @@ export default {
     }
 };
 </script>
+
 <style scoped>
+form {
+    margin-bottom: 50px;
+}
 h1 {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 2px;
-    border-bottom: 2px solid gray;   
+    border-bottom: 3px solid gray;   
 }
 
 #top {
     text-align: center;
     font-family: 'Antic Didone', serif;
-    font-size: 2em;
-    
+    font-size: 2em;   
 }
+
 #top-small {
-    margin-top: 0;
-   
     font-size: 10px;
     text-align: center;
-
 }
 
 input {
     border-radius: 12px;
-    margin-left: 20px;
+    margin-left: 45px;
     cursor: pointer;
     text-align: center;
 }
 
 .button {
+    border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
     background-color: pink;
