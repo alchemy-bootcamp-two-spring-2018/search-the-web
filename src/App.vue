@@ -29,10 +29,10 @@ export default {
     Loading
   },
   methods: {
-    handleSearch(name) {
+    handleSearch(topic) {
       this.loading = true;
 
-      getNews(name).then(data => {
+      getNews(topic).then(data => {
         this.news = data.results;
         this.loading = false;
       });

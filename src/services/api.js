@@ -5,6 +5,6 @@ export function getNews() {
               'country=us&' +
               'apiKey=' + apiKey;
   
-  return fetch(url)
+  return (url)
     .then(response => response.json());
 }
