@@ -1,7 +1,8 @@
 <template>
     <div id="search-main">
         <input
-            v-model="searchTerm">
+            v-model="searchTerm"
+            @keyup.enter="onSearch(searchTerm)">
         <button
             @click="onSearch(searchTerm)">
             Search!
