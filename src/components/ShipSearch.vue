@@ -1,17 +1,16 @@
 <template>
   <form @submit.prevent="onSearch(search)">
-    <label>Enter Star Ship Name</label>
+    <label><strong>Enter Star Ship Name/Type:  </strong></label>
     <input v-model="search"/>
-    <button type="submit">Ship Search</button>
+    <button type="submit">Search Junkyard</button>
     </form>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
-      search: ''
+      search: 'fighter'
     };
   },
   props: {
@@ -23,6 +22,10 @@ export default {
 };
 </script>
 
-<style>
 
+<style scoped>
+form {
+  align-content: center;
+}
 </style>
+

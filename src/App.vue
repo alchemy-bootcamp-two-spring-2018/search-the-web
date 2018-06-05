@@ -32,12 +32,14 @@ export default {
 </script>
 
 <style>
+body {
+  background: rgb(0, 5, 36);
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: rgb(240, 240, 240);
+  width: auto;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <li>
-    <h3>Star-Ship Name: {{starShip.name}}</h3>
-    <h4>Model Class: {{starShip.model}}</h4>
+    <h3>STAR-SHIP: {{starShip.name}}</h3>
+    <h4>MODEL: {{starShip.model}}</h4>
   </li>
     
 </template>
@@ -13,6 +13,13 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
+h3 {
+  text-align: left;
+}
+h4 {
+  color: rgb(155, 155, 155);
+  margin-left: 40px;
+}
 </style>
+
