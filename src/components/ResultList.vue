@@ -15,12 +15,10 @@
 import ListItem from './ListItem';
 
 export default {
-
   props: ['resultsToDisplay'], 
   components: {
     ListItem
   }
-
 }
 </script>
 

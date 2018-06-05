@@ -14,7 +14,6 @@ export function getResults(country) {
   const url = 'https://newsapi.org/v2/top-headlines?'
   + 'country=' + encodeURIComponent(country)
   + '&apiKey=' + apiKey;
-  console.log ('Trying:', url);
   return fetch(url)
     .then(response => response.json());
 }
