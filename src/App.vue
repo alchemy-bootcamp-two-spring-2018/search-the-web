@@ -12,25 +12,28 @@
 </template>
 
 <script>
-import SearchControls from './components/SearchControls.vue'
-import NewsList from './components/NewsList.vue'
-import { getNews } from './services/api.js'
+import SearchControls from './components/SearchControls.vue';
+import NewsList from './components/NewsList.vue';
+import { getNews } from './services/api.js';
 
 
 export default {
+
   data() {
     return {
       news: null,
-    }
+    };
   },
+
   components: {
     SearchControls,
     NewsList
   },
+
   methods: {
     handleSearch(name) {
       getNews(name).then(data => {
-        this.news = data.articles
+        this.news = data.articles;
       });
     }
   }

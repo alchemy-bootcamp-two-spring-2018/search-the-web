@@ -9,17 +9,16 @@
 
 <script>
 export default {
-    data() {
-        return { search: '' };
-    },
-    props: {
-        onSearch: {
-            type: Function,
-            required: true
-        }
+  data() {
+    return { search: '' };
+  },
+  props: {
+    onSearch: {
+      type: Function,
+      required: true
     }
-
-}
+  }
+};
 </script>
 
 <style>
