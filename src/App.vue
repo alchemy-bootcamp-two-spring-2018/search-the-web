@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <h1>Pokemon Search API</h1>
+    <h1>Pokemon API Demo (<a target="new" href="https://pokeapi.co">pokeapi.co</a>)</h1>
     <SearchControl :onSearch="handleSearch"/>
     <Loading :loading="loading"/>
-    <PokemonList :pokemonList="pokemon"/>
+    <PokemonList :pokemon="pokemon"/>
   </div>
 </template>
 
@@ -27,6 +27,7 @@ export default {
   },
   methods: {
     handleSearch(name) {
+      
       this.loading = true;
 
       getPokemon(name.toLowerCase()).then(data => {
@@ -38,7 +39,6 @@ export default {
   },
 
   created: function() {
-    console.log('On APP creation');
     getPokemon(name);
   }
 
@@ -49,5 +49,18 @@ getPokemon(name);
 </script>
 
 <style>
+#app {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
+a {
+  color: crimson;
+}
+a:visited {
+  color: crimson;
+  text-decoration: none;
+}
 </style>

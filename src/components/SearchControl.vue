@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2>Find a pokemon:</h2>
+  <div class="content">
+    <h3>Search for your favorite pokemon:</h3>
     <form @submit.prevent="onSearch(search)">
       <label>Name:</label>
       <input v-model="search"/>
@@ -25,5 +25,7 @@ export default {
 </script>
 
 <style>
-
+.content {
+  margin: 15px;
+}
 </style>

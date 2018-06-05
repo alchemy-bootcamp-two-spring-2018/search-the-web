@@ -3,7 +3,6 @@
     <h2>Results returned here:</h2>
     <ul>
       <Pokemon
-      v-for="pokemon in pokemonList"
       :key="pokemon.name"
       :pokemon="pokemon"
       />
@@ -16,7 +15,7 @@ import Pokemon from './Pokemon';
 
 export default {
 
-  props: ['pokemonList'],
+  props: ['pokemon'],
 
   components: {
     Pokemon
