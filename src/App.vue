@@ -61,6 +61,7 @@ body {
 input {
   height: 30px;
   font-size: 24px;
+  
 }
 label {
   font-size: 2em;

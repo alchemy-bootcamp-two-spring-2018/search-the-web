@@ -2,7 +2,7 @@
     <form @submit.prevent="onSearch(search)">
         <span id="top"><h1>The Newsington Post</h1></span>
         <span id="top-small"><h4>THE MOST ADVANCED NEWS SOURCE AVAILABLE</h4></span>
-        <input placeholder="enter news topic" v-model="search"/>
+        <input placeholder="enter news topic" v-model="search" onSearch="this.value=''" />
         <button class="button" type="submit">Search</button>
     </form>
 </template>
@@ -23,11 +23,12 @@ export default {
 </script>
 <style scoped>
 h1 {
+    text-align: center;
     margin-top: 100px;
     margin-bottom: 2px;
-    border-bottom: 2px solid gray;
-   
+    border-bottom: 2px solid gray;   
 }
+
 #top {
     text-align: center;
     font-family: 'Antic Didone', serif;
@@ -43,21 +44,26 @@ h1 {
 }
 
 input {
+    border-radius: 12px;
     margin-left: 20px;
+    cursor: pointer;
+    text-align: center;
 }
 
 .button {
+    cursor: pointer;
     font-size: 20px;
     background-color: pink;
     margin-left: 10px;
     border: 2px solid purple;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s; 
     transition-duration: 0.1s;
 }
 
 .button:hover {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     color: white;
 }
+
 </style>
