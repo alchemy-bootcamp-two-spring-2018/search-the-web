@@ -20,9 +20,9 @@ export default {
         News
     }            
 };
-            </script>
+</script>
             
-            <style>
+<style>
             
-            </style>
+</style>
             

@@ -13,6 +13,7 @@ import NewsList from './components/NewsList';
 import Loading from './components/Loading';
 import { getNews } from './services/api';  
 
+
 export default {
   data() {
     return {
