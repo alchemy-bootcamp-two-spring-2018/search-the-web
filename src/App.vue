@@ -2,6 +2,7 @@
   <div id="app">
     <Loading :loading="loading"/>
     <SearchControl :onSearch="handleSearch"/>
+    <NewsList :news="news"/>
     <!-- <PeopleLst aka search method here -->
 
      

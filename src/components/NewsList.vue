@@ -2,9 +2,9 @@
   <div>
     <h2>News</h2>
     <ul>
-      <Person
-        v-for="news in news"
-        :key="news.url"
+      <Headline
+        v-for="headline in news"
+        :key="headline.url"
         :news="news"
       />
     </ul>
@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import News from './News';
+import Headline from './Headline';
 
 export default {
-  props:['people'],
+  props:['news'],
   components: {
-    News
+    Headline
   }
 };
 </script>
