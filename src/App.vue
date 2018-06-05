@@ -52,13 +52,13 @@ export default {
     "title search"
     "content content";
   font-family: 'Arial', sans-serif;
-  background: #003658;
+  background: white;
 }
 
 h1 {
   font-family: 'Archivo Black', sans-serif;
   font-size: 10em;
-  color: white;
+  color: black;
   margin: 0px;
 }
 </style>

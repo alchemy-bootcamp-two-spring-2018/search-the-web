@@ -1,12 +1,12 @@
 <template>
-  <div v-if="savedBooks[0]">
-    <h2>Saved Books</h2>
+  <div v-if="savedBooks[0]" class="saved-results">
+    <h2>Saved Books:</h2>
     <div class="saved-books">
       <Book
         v-for="book in savedBooks"
         :key="book.url"
         :book="book"
-        :render="render"
+        :renderSave="renderSave"
       />
     </div>
   </div>
@@ -18,7 +18,7 @@ import Book from './Book';
 export default {
   data() {
     return {
-      render: false
+      renderSave: false
     };
   },
   props: ['savedBooks'],
@@ -29,6 +29,10 @@ export default {
 </script>
 
 <style>
+.saved-results {
+  padding: 20px;
+}
+
 .saved-books {
   display: flex;
   align-items: flex-start;

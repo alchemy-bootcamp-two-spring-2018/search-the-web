@@ -1,8 +1,7 @@
 <template>
   <form @submit.prevent="onSearch(search)">
-    <label>Name:</label>
     <input v-model="search"/>
-    <button type="submit">Search</button>
+    <button id="search-button" type="submit">Search</button>
   </form>
 </template>
 
@@ -23,8 +22,30 @@ export default {
 </script>
 
 <style>
-input {
-  font-size: 5em;
-  width: 50%;
+form {
+  padding: 20px;
+  display: flex;
+  align-items: center;
 }
+
+input {
+  font-size: 3em;
+  width: 70%;
+}
+
+#search-button {
+  width: 100px;
+  border: none;
+  background: grey;
+  color: white;
+  padding: 5px;
+  transition: all .3s ease;
+  cursor: pointer;
+  height: 60px;
+}
+
+#search-button:hover {
+  background: lightgrey;
+}
+
 </style>

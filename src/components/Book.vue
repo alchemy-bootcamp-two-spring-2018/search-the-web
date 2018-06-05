@@ -1,41 +1,65 @@
 <template>
-  <li class="book">
+  <div class="book">
     <img v-if="book.volumeInfo.imageLinks" :src="book.volumeInfo.imageLinks.thumbnail">
-    <div class="plaque">
       <a :href="book.volumeInfo.infoLink" target="_blank"><h3>{{ book.volumeInfo.title }}</h3></a>
       <p v-if="book.volumeInfo.authors">by {{ book.volumeInfo.authors[0] }}</p>
-      <button v-if="render" @click="onClick(book)">Save</button>
-    </div>
-  </li>
+      <button v-if="renderSave" @click="onClick(book)">Save</button>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
     book: Object,
-    render: Boolean,
     onClick: {
       type: Function,
-    }
+    },
+    renderSave: Boolean
   }
 };
 </script>
 
 <style>
 .book {
-  display: inline-block;
   width: 280px;
   height: 400px;
   margin: 5px;
+  border: 1px solid black;
+  display: grid;
+  grid-template: 6fr 2fr 1fr 1fr / auto;
+  grid-template-areas: 
+    "book-image"
+    "book-title"
+    "book-author"
+    "book-save";
+  box-sizing: border-box;
+  text-align: center;
 }
 
 img {
-  background: black;
-  border: 15px double gold;
+  grid-area: book-image;
+  margin: 20px auto 0px auto;
 }
 
-.plaque {
-  background: white;
+.book>a {
+  grid-area: book-title;
+}
 
+.book>p {
+  grid-area: book-author;
+}
+
+.book>button {
+  grid-area: book-save;
+  border: none;
+  background: grey;
+  color: white;
+  padding: 5px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.book>button:hover {
+  background: lightgrey;
 }
 </style>
