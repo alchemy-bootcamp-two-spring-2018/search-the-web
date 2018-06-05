@@ -1,7 +1,12 @@
 <template>
     <form @submit.prevent="onSearch(search)">
-        <span id="top"><h1>The Newsington Post</h1></span>
-        <span id="top-small"><h4>THE MOST ADVANCED NEWS SOURCE AVAILABLE</h4></span>
+        <span id="top">
+            <h1>The Newsington Post</h1>
+        </span>
+        <span id="top-small">
+            <h4>THE MOST ADVANCED NEWS SOURCE AVAILABLE</h4>
+            <p id="tiny-line">we don't even have our own content</p>
+        </span>
         <input placeholder="enter news topic" v-model="search" onSearch="this.value=''" />
         <button class="button" type="submit">Search</button>
     </form>
@@ -40,10 +45,13 @@ h1 {
 }
 
 #top-small {
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
 }
-
+#tiny-line {
+    margin-top: 0px;
+    font-size: 13px;
+}
 input {
     border-radius: 12px;
     margin-left: 45px;

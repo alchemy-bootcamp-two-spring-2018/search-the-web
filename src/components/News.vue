@@ -6,6 +6,7 @@
       :key="news.description" >
       <div id="content-block">
         <h3>{{news.title}}</h3>
+        <p>{{news.description}}</p>
         <h4>source: {{news.source.name}}</h4>
         <a 
         :href="news.url"
@@ -13,7 +14,6 @@
       </div>
     </li>
   </div>
-
 </template>
 
 <script>
