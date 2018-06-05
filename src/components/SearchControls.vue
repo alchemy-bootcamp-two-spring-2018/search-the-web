@@ -21,7 +21,7 @@ export default {
   },
   
   created() {
-    this.onSearch(this.search)
+    this.onSearch(this.search);
   },
 
   props: {
