@@ -18,6 +18,7 @@ export default {
   data() {
     return {
       pokemon: null
+    
     };
   }, 
   components: {
@@ -30,6 +31,7 @@ export default {
     handleSearch(pokemon) {
       getPokemon(pokemon).then(data => {
         this.pokemon = data;
+        console.log(this.pokemon);
         //this.loading = false will go here
       });
     }
