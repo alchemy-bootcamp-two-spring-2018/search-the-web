@@ -7,7 +7,6 @@ export function getNews() {
               'from=2018-06-04&' +
               'sortBy=popularity&' +
               'apiKey=784b560036d447e8b3bdbe91b17078e8';
-  
   return fetch(url)
     .then(response => response.json());
 }

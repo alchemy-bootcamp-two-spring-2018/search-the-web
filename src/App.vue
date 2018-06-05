@@ -3,9 +3,6 @@
     <Loading :loading="loading"/>
     <SearchControl :onSearch="handleSearch"/>
     <NewsList :news="news"/>
-    <!-- <PeopleLst aka search method here -->
-
-     
   </div>
 </template>
 
@@ -14,7 +11,6 @@ import SearchControl from './components/SearchControl';
 import NewsList from './components/NewsList';
 import Loading from './components/Loading';
 import { getNews } from './services/api';
-
 
 export default {
   data() {

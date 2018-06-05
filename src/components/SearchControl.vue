@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return { search: ' ' };
@@ -18,7 +17,5 @@ export default {
       required: true
     }
   }
-
 };
-
 </script>
