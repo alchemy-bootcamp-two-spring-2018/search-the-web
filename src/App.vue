@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <h1>Hello World: Let's Search the Web!!!</h1>
+    <h1>Pok&eacutemon Search</h1>
     <SearchControl :onSearch="handleSearch"/>
+    <Loading :loading="loading"/>
     <PokemonList :pokemon="pokemon"/>
   </div>
 </template>
@@ -9,30 +10,29 @@
 <script>
 import SearchControl from './components/SearchControl.vue';
 import PokemonList from './components/PokemonList';
+import Loading from './components/Loading';
 import { getPokemon } from './services/api';
-
-// eslint-disable-next-line
-// console.log(process.env.VUE_APP_API_KEY);
 
 export default {
   data() {
     return {
-      pokemon: null
-    
+      pokemon: null,
+      loading: false
     };
   }, 
   components: {
     SearchControl,
-    PokemonList
+    PokemonList,
+    Loading
   },
   methods: {
-    //loading goes here
-
     handleSearch(pokemon) {
+      this.loading = true;
+
       getPokemon(pokemon).then(data => {
         this.pokemon = data;
         console.log(this.pokemon);
-        //this.loading = false will go here
+        this.loading = false;
       });
     }
   }
@@ -47,5 +47,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+body {
+  background-color: rgb(204, 227, 235);
 }
 </style>

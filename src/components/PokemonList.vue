@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>PokemonList</h2>
+    <h2>Search Results:</h2>
     <ul>
       <Pokemon 
         v-if="pokemon"

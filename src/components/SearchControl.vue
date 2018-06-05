@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1>Controls</h1>
+    <h1></h1>
     <form @submit.prevent="onSearch(search)">
-      <label>pokemon: </label>
-      <input v-model="search" placeholder="search Pokemon">
+      <label>Search by name: </label>
+      <input v-model="search" placeholder="pikachu">
       <button type="submit">Search</button>
-      <div>You searched for: {{ search }}</div>
+      <div></div>
       </form>
   </div>
 </template>
@@ -28,5 +28,8 @@ export default {
 </script>
 
 <style>
+button{
+  margin-left: 10px;
+}
 
 </style>
