@@ -32,6 +32,7 @@ export default {
   justify-content: center;
   width: 280px;
   height: 400px;
-  border: 1px solid black;
+  background: antiquewhite;
+  margin: 5px;
 }
 </style>
