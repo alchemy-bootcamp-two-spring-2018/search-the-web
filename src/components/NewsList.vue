@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h2>News</h2>
         <ul>
             <News
             v-for="news in news"
@@ -22,7 +21,15 @@ export default {
 };
 </script>
             
-<style>
-            
+<style scoped>
+ul {
+list-style: none;
+}
+h2 {
+    font-size: 3em;
+}
+body {
+    background-color: pink;
+}
 </style>
             

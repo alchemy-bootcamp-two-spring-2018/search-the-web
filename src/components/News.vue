@@ -1,6 +1,6 @@
 <template>
   <li>
-    <h3>{{news.topic}}</h3>
+    <h3>{{news.title}}</h3>
   </li>
 </template>
 
@@ -9,3 +9,9 @@ export default {
   props: ['news']
 };
 </script>
+
+<style scoped>
+li {
+  list-style: none;
+}
+</style>
