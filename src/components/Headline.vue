@@ -1,11 +1,12 @@
 <template>
   <li>
-    <h3>{{headline.title}}</h3>
+    <h3>{{news.title}}</h3>
+    <a :href="news.url">{{news.source.name}}</a>
   </li>
 </template>
 
 <script>
 export default {
-  props: ['headline']
+  props: ['news']
 };
 </script>

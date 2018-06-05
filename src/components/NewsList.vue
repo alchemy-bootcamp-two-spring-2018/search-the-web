@@ -3,9 +3,9 @@
     <h2>News</h2>
     <ul>
       <Headline
-        v-for="headline in news"
-        :key="headline.url"
-        :news="news"
+        v-for="articles in news"
+        :key="articles.url"
+        :news="articles"
       />
     </ul>
   </div>

@@ -33,7 +33,7 @@ export default {
       this.loading = true;
 
       getNews(topic).then(data => {
-        this.news = data.results;
+        this.news = data.articles;
         this.loading = false;
       });
     }
