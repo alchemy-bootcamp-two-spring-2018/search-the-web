@@ -28,4 +28,7 @@ export default {
 .content {
   margin: 15px;
 }
+input {
+  margin: 5px;
+}
 </style>

@@ -16,7 +16,7 @@ import { getPokemon } from './services/api.js';
 export default {
   data() {
     return {
-      pokemon: null,
+      pokemon: '',
       loading: false
     };
   },
@@ -43,8 +43,6 @@ export default {
   }
 
 };
-
-getPokemon(name);
 
 </script>
 

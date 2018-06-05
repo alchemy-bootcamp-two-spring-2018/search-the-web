@@ -1,17 +1,17 @@
 <template>
-  <div class="content">
+  <div v-if="pokemon" class="content">
+    <h3>Search results:</h3>
     <img :src="pokemon.sprites.front_default">
     <h3>{{ pokemon.name }}</h3>
     <p>Primary Ability: {{ pokemon.abilities[0].ability.name}}</p>
     <p>Primary Type: {{ pokemon.types[0].type.name}}</p>
     <p>Weight: {{ pokemon.weight}} </p>
-    </div>
+  </div>
 </template>
 
 <script>
 export default {
   props: ['pokemon']
-
 };
 </script>
 
