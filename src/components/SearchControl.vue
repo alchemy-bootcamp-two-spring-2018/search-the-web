@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Search Control Area</h1>
+
     <form @submit.prevent="onSearch(search)">
-      <label>Movie:</label>
+      <label>Search By Movie: </label>
       <input v-model="search"/>
       <button type="submit">Search</button>
     </form>
