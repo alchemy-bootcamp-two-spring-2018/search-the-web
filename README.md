@@ -1,0 +1,1 @@
+This lab was don by Robert Thompson. It is a simple, component based app that uses an API to search news article on the web. It aggregates news items from all over the web, not just limited by country. You can type in any word and it will find 20 articles for you to see!
