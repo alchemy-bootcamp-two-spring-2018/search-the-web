@@ -12,7 +12,7 @@ import PokemonList from './components/PokemonList';
 import { getPokemon } from './services/api';
 
 // eslint-disable-next-line
-console.log(process.env.VUE_APP_API_KEY);
+// console.log(process.env.VUE_APP_API_KEY);
 
 export default {
   data() {
@@ -29,7 +29,7 @@ export default {
 
     handleSearch(pokemon) {
       getPokemon(pokemon).then(data => {
-        this.pokemon = data.results;
+        this.pokemon = data;
         //this.loading = false will go here
       });
     }

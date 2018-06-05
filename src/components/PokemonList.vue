@@ -3,8 +3,7 @@
     <h2>PokemonList</h2>
     <ul>
       <Pokemon 
-        v-for="pokemon in pokemon"
-        :key="pokemon.url"
+        v-if="pokemon"
         :pokemon="pokemon"
       />
     </ul>
