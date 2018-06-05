@@ -1,7 +1,13 @@
 <template>
-  <div>
+  <div id="results">
     <h2>Result List</h2>
-    <ListItem />
+    <ul>
+      <ListItem 
+        v-for="item in resultsToDisplay"
+        :key="item.url"
+        :item="item"
+      />
+    </ul>
   </div>
 </template>
 
@@ -10,9 +16,7 @@ import ListItem from './ListItem';
 
 export default {
 
-  props: {
-
-  }, 
+  props: ['resultsToDisplay'], 
   components: {
     ListItem
   }
@@ -20,6 +24,8 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-
+<style scoped>
+  #results {
+    text-align: left;
+  }
 </style>

@@ -1,26 +1,39 @@
 <template>
   <div id="app">
-    <h1>TasteDive Interface</h1>
-    <SearchControl />
-    <ResultList />
+    <h1>Headlines from Around the World</h1>
+    <SearchControl :triggerSearch="handleSearch"/>
+    <Loading :loading="loading" />
+    <ResultList :resultsToDisplay="results"/>
   </div>
 </template>
 
 <script>
 import SearchControl from './components/SearchControl';
 import ResultList from './components/ResultList';
+import Loading from './components/Loading';
+import { getResults } from './services/api';
 
 export default {
-  components: {
-    SearchControl,
-    ResultList
+
+  data() {
+    return {
+      results: null,
+      country: 'us',
+      loading: false
+    }
   },
 
-    methods: {
-    handleSearch(keywords) {
+  components: {
+    SearchControl,
+    ResultList,
+    Loading
+  },
+
+  methods: {
+    handleSearch(country) {
       this.loading = true;
-      getPeople(name).then(data => {
-        this.people = data.results;
+      getResults(country).then(data => {
+        this.results = data.articles;
         this.loading = false;
       });
     }

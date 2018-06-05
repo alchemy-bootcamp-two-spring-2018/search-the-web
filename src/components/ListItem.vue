@@ -1,18 +1,17 @@
 <template>
   <div>
-    <h2>List Item</h2>
+    <li>
+      <a :href="item.url"> {{item.title}} </a>
+      <p><strong>{{item.source.name}}</strong></p>
+    </li>
   </div>
 </template>
 
 <script>
 export default {
 
-  props: {
-
-  }
+  props: ['item']
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 
 </style>
