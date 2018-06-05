@@ -1,10 +1,22 @@
 <template>
-  <h3>Search Results</h3>
+  <div>
+    <h3>Search Results</h3>
+    <single-article
+    v-for="item in articles"
+    :key="item.url"
+    :article="item"
+    />
+  </div>
 </template>
 
 <script>
+import SingleArticle from './SingleArticle.vue';
 
 export default {
-  props: ['article']
+  props: ['articles'],
+
+  components: {
+    SingleArticle
+  }
 }
 </script>

@@ -3,7 +3,7 @@
     
     <loading :loading="loading"/>
     <search-control :onSearch="handleSearch"/>
-    <article-list :article="article"
+    <article-list :articles="articles"
     />
 
     
@@ -17,10 +17,12 @@ import ArticleList from './components/ArticleList.vue';
 import Loading from './components/Loading.vue';
 import { getArticles } from '../services/api.js';
 
+console.log(process.env.VUE_APP_API_KEY);
+
 export default {
   data() {
     return {
-      article: null,
+      articles: null,
       loading: false
     };
 
@@ -37,7 +39,7 @@ export default {
       this.loading = true;
 
       getArticles(keyword).then(data => {
-        this.article = data.articles;
+        this.articles = data.articles;
         this.loading = false;
       });
     }
