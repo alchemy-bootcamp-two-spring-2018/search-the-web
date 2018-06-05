@@ -19,6 +19,9 @@ export default {
             required: true
         }
     },
+    created:function() {
+        this.onSearch('turkeys');
+    },
     data() {
         return {
             searchTerm: null
