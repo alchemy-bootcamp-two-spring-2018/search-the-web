@@ -12,6 +12,9 @@ export default {
       search: 'Hyperion'
     };
   },
+  created() {
+    this.onSearch(this.search);
+  },
   props: {
     onSearch: {
       type: Function,

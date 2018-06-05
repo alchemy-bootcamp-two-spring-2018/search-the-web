@@ -20,8 +20,6 @@ export default {
       savedBooks: []
     };
   },
-  created() {
-  },
   components: {
     BookList,
     SearchControl,
