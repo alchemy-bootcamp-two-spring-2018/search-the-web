@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="onSearch(search)">
-    <label>Title:</label>
+    <label>Search for News Articles By Keyword: </label>
     <input v-model="search" />
     <button type="submit">Search</button>
   </form>
