@@ -7,10 +7,10 @@
 </template>
 
 <script>
-
 import ShipSearch from './components/ShipSearch';
 import ShipList from './components/ShipList';
 import { getStarShip } from './services/api';
+
 export default {
   data() {
     return {

@@ -3,7 +3,7 @@
     <label><strong>Enter Star Ship Name/Type:  </strong></label>
     <input v-model="search"/>
     <button type="submit">Search Junkyard</button>
-    </form>
+  </form>
 </template>
 
 <script>
@@ -21,7 +21,6 @@ export default {
   }
 };
 </script>
-
 
 <style scoped>
 form {
