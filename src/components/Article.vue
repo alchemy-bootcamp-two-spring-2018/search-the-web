@@ -9,14 +9,14 @@
 </template>
 
 <script>
-  export default {
-    props: ['article']
-  };
+export default {
+  props: ['article']
+};
 </script>
 
 <style>
   .article {
-    padding: 10px;
-    border-radius: 12px;
-  }
+  padding: 10px;
+  border-radius: 12px;
+}
 </style>
