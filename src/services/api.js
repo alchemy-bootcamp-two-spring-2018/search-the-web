@@ -1,4 +1,4 @@
-
+// eslint-disable-next-line
 const apiKey = process.env.VUE_APP_API_KEY;
   
 export function getArticles(title) {
