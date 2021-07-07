@@ -1,0 +1,1 @@
+This site needs an env file with an api key. Got to http://www.omdbapi.com to request a key, and then create an env file with "VUE_APP_API_KEY=" + your key.
